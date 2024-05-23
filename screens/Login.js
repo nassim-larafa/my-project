@@ -25,10 +25,10 @@ const Login = ({ navigation }) => {
         password: password,
       });
       await AsyncStorage.setItem('token', response.data.access);
-      Alert.alert('Login Success', 'Token stored successfully');
+      Alert.alert('Login Success', 'your login is successfull');
       navigation.navigate('Dashboard', { username: username });
     } catch (error) {
-      Alert.alert('Login Failed', 'Invalid credentials');
+      Alert.alert('Login Failed', 'Invalid Password or Username');
     }
   };
 
